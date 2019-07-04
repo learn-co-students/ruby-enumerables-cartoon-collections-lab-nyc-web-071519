@@ -5,17 +5,17 @@ def roll_call_dwarves(dwarves)
 end
 
 def summon_captain_planet(planeteer_calls)
-  planeteer_calls.map { |call| call.capitalize + '!' }
+  planeteer_calls.map { |c| c.capitalize + '!' }
 end
 
 def long_planeteer_calls(planeteer_calls)
-  planeteer_calls.any? { |call| call.length > 4 }
+  planeteer_calls.any? { |c| c.length > 4 }
 end
 
 def find_the_cheese(potentially_cheesy_items)
   cheese_types = ["cheddar", "gouda", "camembert"]
 
-  potentially_cheesy_items.find do |maybe_cheese|
-    cheese_types.include?(maybe_cheese)
+  potentially_cheesy_items.find do |cheese|
+    cheese_types.include?(cheese)
   end
 end
